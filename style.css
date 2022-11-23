@@ -1,20 +1,149 @@
-@media all and (min-width:1200px){
-  #app{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 14px 0;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header button {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  color: crimson;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  padding: 0px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.logo a {
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz span {
+  display: inline-block;
+}
+
+.quiz a {
+  display: inline-block;
+  background-color: crimson;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-top: 12px;
+}
+
+section {
+  margin-top: 34px;
+}
+
+section .title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.card-container * {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.card {
+  border: 1px solid lavender;
+  margin: 8px 12px;
+  padding: 8px;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-content h2 {
+  font-size: 1.2em;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.753);
+  margin: 5px 0;
+}
+
+.card h2:hover {
+  color: crimson;
+}
+
+/* ------------------------------ */
+
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* Main Start */
+/* @media all and (min-width: 1200px) {
+  #app {
     max-width: 1000px;
     margin: 0 auto;
   }
 }
 @media all and (min-width: 960px) and (max-width: 1199px) {
-  #app{
+  #app {
     max-width: 900px;
     margin: 0 auto;
   }
 }
 
 @media all and (max-width: 599px) {
-  img{
-    width:100%;
-    height:200px;
+  img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
   }
 }
@@ -24,19 +153,19 @@
     clear: both;
     display: block;
   }
-  #event-details-container{
+  #event-details-container {
     clear: none;
   }
-  img{
-    width:60%;
-    height:300px;
+  img {
+    width: 60%;
+    height: 300px;
     float: left;
     border-radius: 8px;
     object-fit: cover;
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
- }
+  }
 }
 
 hr {
@@ -58,7 +187,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
 }
@@ -71,14 +203,14 @@ h2 {
   margin-bottom: 0px;
 }
 
-label{
+label {
   font-size: 18px;
 }
 
 p {
   font-size: 18px;
-  margin-top:10px;
-  margin-bottom:0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 #guestbook > p {
@@ -86,9 +218,9 @@ p {
   font-size: 14px;
 }
 
-input{
+input {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 14px;
   padding: 4px 0;
   background: 0 0;
@@ -96,35 +228,36 @@ input{
   color: inherit;
 }
 
-button.clicked{
+button.clicked {
   background-color: rgb(60, 67, 154);
   border-color: rgb(60, 67, 154);
   color: white;
   outline-color: rgb(60, 67, 154);
 }
 
-button, button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored{
-align-items: center;
-background-color: rgba(0, 0, 0, 0);
-border-color: rgb(60, 67, 154);
-border-radius: 4px;
-border-style: solid;
-border-width: 1px;
-box-shadow: none;
-color: rgb(60, 67, 154);
-cursor: default;
-display: inline-flex;
-font-family: Roboto, sans-serif;
-font-size: 14px;
-font-weight: bold;
-height: 36px;
-justify-content: center;
-margin: 8px 16px;
-outline-color: rgb(60, 67, 154);
-overflow: hidden;
-padding: 0px 15px;
-position: relative;
-text-align: center;
-text-transform: uppercase;
-vertical-align: middle;
-}
+button,
+button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(60, 67, 154);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  color: rgb(60, 67, 154);
+  cursor: default;
+  display: inline-flex;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  justify-content: center;
+  margin: 8px 16px;
+  outline-color: rgb(60, 67, 154);
+  overflow: hidden;
+  padding: 0px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+} */

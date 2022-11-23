@@ -26,8 +26,9 @@ import {
 import * as firebaseui from 'firebaseui';
 
 // Document elements
-const startRsvpButton = document.getElementById('startRsvp');
+const startRsvpButton = document.getElementById('sign-btn');
 const guestbookContainer = document.getElementById('guestbook-container');
+const quiz = document.getElementById('quiz');
 
 const form = document.getElementById('leave-message');
 const input = document.getElementById('message');
@@ -92,14 +93,16 @@ async function main() {
     if (user) {
       startRsvpButton.textContent = 'LOGOUT';
       // Show guestbook to logged-in users
+      quiz.style.display = 'flex';
       guestbookContainer.style.display = 'block';
       // Subscribe to the guestbook collection
       subscribeGuestbook();
       // Subcribe to the user's RSVP
       subscribeCurrentRSVP(user);
     } else {
-      startRsvpButton.textContent = 'RSVP';
+      startRsvpButton.textContent = 'Login';
       // Hide guestbook for non-logged-in users
+      quiz.style.display = 'none';
       guestbookContainer.style.display = 'none';
       // Unsubscribe from the guestbook collection
       unsubscribeGuestbook();

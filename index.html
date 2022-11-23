@@ -14,12 +14,79 @@
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-  <div id="app">
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="#">BitLabs</a>
+      </div>
+      <button id="sign-btn">Sign up</button>
+    </div>
+  </header>
+  <section id="firebaseui-auth-container"></section>
+  <main>
+    <section id="quiz" class="quiz">
+      <span>Quiz Score: 29pt</span>
+      <a href="/quiz.html">Take Today's Quiz</a>
+    </section>
+    <section class="article">
+      <div class="title">
+        <h1>Articles for the week</h1>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <a href="#">
+            <img
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              alt=""
+            />
+            <div class="card-content">
+              <h2>Understanding The Value of Periodic Breaks</h2>
+              <p>
+                Working for long hours without any break can lead to burnout.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img
+              src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              alt=""
+            />
+            <div class="card-content">
+              <h2>Learning How to Learn: The Most Important Developer Skill</h2>
+              <p>
+                When you're a developer, your job requires you to learn every
+                single day...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img
+              src="https://images.unsplash.com/photo-1592495981488-073153776d9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80"
+              alt=""
+            />
+            <div class="card-content">
+              <h2>7 Websites That Will Help You Spend Your time Wisely</h2>
+              <p>
+                The internet is a great treasure for someone who knows how to
+                use it.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <div id="app">
     <img
       src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/codelab.png?alt=media&token=f45f808c-ce40-4b34-944c-8d8fac00e13d"
     />
@@ -29,7 +96,6 @@
 
       <p><i class="material-icons">calendar_today</i> October 30</p>
       <p><i class="material-icons">location_city</i> San Francisco</p>
-      <!-- ADD THE RSVP BUTTON HERE -->
       <button id="startRsvp">RSVP</button>
     </section>
 
@@ -60,5 +126,5 @@
 
       <section id="guestbook"></section>
     </section>
-  </div>
+  </div> -->
 </body>
